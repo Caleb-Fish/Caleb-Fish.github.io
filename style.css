@@ -1,0 +1,287 @@
+/* Change these variables to update the site's main colours. */
+:root {
+  --ink: #18324a;
+  --muted-ink: #496276;
+  --blue: #2f6087;
+  --blue-dark: #214766;
+  --cream: #fbf7ed;
+  --cream-deep: #f1eadb;
+  --white: #ffffff;
+  --line: #d7e0e5;
+  --focus: #b85c38;
+  --max-width: 1120px;
+}
+
+/* Change the spacing values here if you want more or less breathing room. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+.site-name {
+  line-height: 1.15;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.35rem;
+}
+
+a {
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--focus);
+}
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(calc(100% - 3rem), var(--max-width));
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 5.25rem;
+}
+
+.site-name {
+  color: var(--ink);
+  font-size: 1.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.welcome {
+  display: grid;
+  align-items: center;
+  min-height: min(78vh, 700px);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(120deg, var(--cream) 0%, var(--cream-deep) 100%);
+}
+
+.welcome-content {
+  padding: 6rem 0;
+}
+
+.eyebrow,
+.section-label,
+.project-type,
+.item-number {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.section-label {
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  color: var(--muted-ink);
+  font-size: 1.35rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  color: var(--white);
+  background: var(--blue-dark);
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--white);
+  background: var(--focus);
+}
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.about-copy {
+  max-width: 46rem;
+  color: var(--muted-ink);
+  font-size: 1.25rem;
+}
+
+.section-tinted {
+  background: var(--cream-deep);
+}
+
+.three-column-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.info-item,
+.project-card {
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.item-number,
+.project-type {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.info-item p,
+.project-card p:not(.project-type) {
+  margin-bottom: 0;
+  color: var(--muted-ink);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.55rem;
+}
+
+.project-card a {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.contact-content {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact-content p:last-child {
+  max-width: 34rem;
+  margin-bottom: 0;
+  color: var(--muted-ink);
+  font-size: 1.25rem;
+}
+
+.email-link {
+  white-space: nowrap;
+}
+
+.site-footer {
+  padding: 1.5rem 0;
+  color: var(--muted-ink);
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(calc(100% - 2rem), var(--max-width));
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 0.4rem 1rem;
+  }
+
+  .welcome-content {
+    padding: 5rem 0;
+  }
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .three-column-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item,
+  .project-card {
+    min-height: auto;
+  }
+}
